@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Will you be my Valentine? 💕</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd1dc, #fff0f5);
+  font-family: "Comic Sans MS", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(255,255,255,0.25);
+  padding: 30px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 420px;
+  backdrop-filter: blur(10px);
+}
+
+img {
+  width: 200px;
+  margin: 15px 0;
+}
+
+button {
+  padding: 14px 26px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #ff6f91;
+  color: white;
+  margin: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="content">
+  <h2>Hi you 🥺💗</h2>
+  <img src="https://i.imgur.com/3XKQZ6z.png">
+  <p>I have one important question…</p>
+  <button onclick="next()">Tap 💖</button>
+</div>
+
+<script>
+function next() {
+  document.getElementById("content").innerHTML = `
+    <h2>Will you be my Valentine? 💌</h2>
+    <img src="https://i.imgur.com/JUqkK1R.png">
+    <button onclick="yes()">Yes 😘</button>
+    <button onclick="no()">No 😭</button>
+  `;
+}
+
+function yes() {
+  document.getElementById("content").innerHTML = `
+    <h2>YAYYYYY 😭💖</h2>
+    <img src="https://i.imgur.com/QqVHd9y.png">
+    <p>You just made me very very happy 🐱💕</p>
+  `;
+}
+
+function no() {
+  document.getElementById("content").innerHTML = `
+    <p>Ohhhhhhhhhhhhhh hange 👏🏻👏🏻👏🏻</p>
+    <p>mmmhmmmhmmhmm</p>
+    <p>Illa illa irli irli bidi ✋🏻</p>
+    <p>Illa shhhh it’s okay.</p>
+    <p>Sorry kshamsbidi 🙏🏻</p>
+    <p>Ey ✋🏻 shh irli</p>
+    <button onclick="next()">Try again 😏</button>
+  `;
+}
+</script>
+
+</body>
+</html>
